@@ -32,13 +32,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // delete playlist
         const deleteButton = card.querySelector('.delete-button');
-        
         deleteButton.addEventListener('click', (event) => {
-            console.log(card);
             event.stopPropagation();
             console.log("delete");
             card.remove();
         });
+
         playlistContainer.appendChild(card);
     });
 
@@ -142,55 +141,6 @@ function displaySongs(playlist){
         
 
         modalContent.appendChild(songCards);
-}
-
-function toggleModal() {
-    //     const modal = document.querySelector(".modal-content");
-//     modal.innerHTML = " ";
-//     const modalHeading = document.createElement("div")
-//     modalHeading.classList.add("modal-heading");
-    
-//     modalHeading.innerHTML = `
-//     <img src ="${playlist.playlist_art}">
-
-//     <div class="playlist-info">
-//         <h3>${playlist.playlist_name}</h3>
-//         <h5>Created by ${playlist.playlist_creator}</h5>
-
-//     </div>
-//     <span class = "close">&times</span>
-    
-//     `;
-
-//     modal.appendChild(modalHeading)
-//     modal.innerHTML += "<button class='btn'> Shuffle </button>"
-
-//     const shuffleButton = document.querySelector('.btn');
-//     shuffleButton.addEventListener('click', () => {
-
-//     const shuffledSongs = shuffleArray(playlist.songs);
-//     playlist.songs = shuffledSongs;
-//     })
-//     const songCards = document.querySelector(".song-cards");
-//     songCards.innerHTML = "";
-//     shuffledSongs.forEach(song => {
-//         const song_det = document.createElement("div");
-//         song_det.classList.add("song");
-//         song_det.innerHTML = `
-//             <img src = ${song.cover-art}>
-//             <div class = "song-info">
-//                 <p class = "song-title">${song.title}</p>
-//                 <p>${song.artist}</p>
-//                 <p>${song.album}</p>
-//             </div>
-//             <div class ="duration">
-//                 <p> ${song.duration}</p>
-//             </div>
-//         `;
-//         songCards.appendChild(song_det);
-//     });
-    // Implement the logic to show a modal with the playlist songs
-    console.log(songs);  // For demonstration purposes, log the songs to the console
 }
 
 document.addEventListener('DOMContentLoaded', function() {
