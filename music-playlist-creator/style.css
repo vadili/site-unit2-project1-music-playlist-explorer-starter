@@ -2,5 +2,287 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f5afc2;
+    text-align: center;
+}
+
+header {
+    background-color: #4a4a4a;
+    color:white;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+footer {
+    background-color: #4a4a4a;
+    color:white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+main {
+    padding: 20px;
+}
+.heading{
+    display: flex;
+    flex-direction: column;
+}
+.heading button{
+    border: none;
+    background-color: #4a4a4a;
+    color: white;
+}
+.playlist-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+main{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(252, 252, 252, 0);
+}
+.playlist{
+    text-align: center;
+    border-radius: 13px;
+    background-color: rgba(235, 205, 245, 0.988);
+    width: fit-content;
+    box-shadow: 0px 0.5px 1px;
+}
+.playlist:hover {
+    transform:scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+} 
+img{
+    border-radius: 11px 11px 0 0;
+    width: 15vw;
+}
+
+
+ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* .modal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.modal-content {
+    position: relative;
+    margin: 10% auto;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80%;
+    max-width: 100%;
+    background-color: #fff;
+    padding: 2em;
+    border: 2px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: slide-down 0.3s ease;
+
+} */
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transition: translateY(-50%);
+    }
+} 
+
+
+
+.playlist-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.playlist-card {
+    border-radius: 11px;
+    width: 200px;
+    text-align: center;
+    background-color: rgb(248, 195, 248) ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.playlist-card:hover {
+    transform: scale(1.05);
+}
+
+.playlist-cover {
+    width: 100%;
+    height: 200px;
+    border: block;
+    border-radius: 5px 5px 0 0;
+}
+.playlist-name {
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+}
+
+.playlist-creator,
+.playlist-likes {
+    font-size: 0.9em;
+    color: #666;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.playlists {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+} 
+
+.like-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 24px;
+    color: #c8b5b5;
+    transition: color 0.3s ease;
+}
+
+.like-button.liked {
+    color: red;
+    transform: scale(1.2);
+}
+.heading button:hover{
+    background-color: bl;
+}
+.like-count {
+    margin-left: 8px;
+    font-size: 18px;
+    color: #333;
+}
+
+
+.modal-overlay {
+    display: none; 
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    /* display: flex; */
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+ }
+ .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px 40px;
+    flex-direction: column;
+    gap: 20px;
+    display: flex;
+    z-index: 100;
+    border: 1px solid #888;
+    border-radius: 20px;
+    width: fit-content; /* Could be more or less, depending on screen size */
+ }
+
+ .modal-heading {
+    display: flex;
+    width: 70vw;
+    gap: 20px;
+}
+
+.modal-heading img {
+    height: 120px;
+    width: 100px;
+    border-radius: 5px 5px 0 0;
+    /* object-fit: contain; */
+}
+
+.song-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.song {
+    display:flex;
     background-color: #f8f8f8;
+    gap: 10px;
+    padding: 7px 14px;
+    border-radius: 10px;
+    border: solid grey 0.5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.song img {
+    width: 70px;
+    height: 70px;
+    border-radius: 7px;
+}
+.song-info-container{
+    display: flex;
+    gap: 10px;
+    text-align: left;
+}
+.song-info p {
+    font-size: 10px;
+}
+
+.song-info .song-title {
+    font-weight: bolder;
+    font-size: 11px;
+}
+
+.duration {
+    justify-content: space-between;
+    margin-right: -100px;
+}
+.delete-button {
+    background-color: #ad1717;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 3px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: rgb(104, 6, 6);
 }

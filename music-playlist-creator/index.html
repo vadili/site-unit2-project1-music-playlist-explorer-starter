@@ -4,23 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    
     <title>Music Playlist Explorer</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
     <header>
-        <!-- Your header content here -->
+        <h2> Music Playlist Explorer</h2>
     </header>
+    <main></main>
+    <div class = "playlists"></div>
 
-    <main> 
-        <!-- Your main content here -->
-    </main>
+    <div id = "playlist-cards" class="playlist-cards-container"></div>
 
+    <template id="playlist-card-template"> 
+        <div class="playlist-card"> 
+            <button class="playlist-cover"></button>
+            <h3 class="playlist-name"></h3> 
+            <p class="playlist-creator"></p> 
+            <p class="playlist-likes"></p>
+                <i class="fa-regular fa-heart like-button fa-beat"></i> 
+                <span class = "like-count">0</span>
+                <button class ="delete-button"> Delete</button>
+        </div>
+    </template>
+    
     <footer>
-        <!-- Your footer content here -->
+        <p> 2024 Music Playlist Explorer</p>
     </footer>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-content">
+        </div>
+     </div> 
+     
+    
+
     <script src="data/data.js"></script>
     <script src="script.js"></script>
 </body>

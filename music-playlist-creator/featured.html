@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Playlist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5afc2;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            width: 80%;
+            height: 80%;
+            /* background-color: rgba(0,0,0,0.5); */
+            border-radius: 15px;
+            overflow: hidden;
+            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+        }
+        .playlist-info {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 15px 15px 0 0;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid #ddd;
+        }
+        .playlist-info img {
+            width: 80%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .playlist-info h2 {
+            font-size: 24px;
+            margin: 0;
+        }
+        #playlist-name{
+            color: white;
+        }
+        .songs-list {
+            flex: 1;
+            padding: 20px;
+            max-height: 100%;
+            align-self: end;
+            background-color: rgba(0,0,0,0.5);
+            margin-left: 20px;
+            padding-top: 50px;
+            border-radius: 35px 35px 0 0;
+            height: fit-content;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
+        header {
+    background-color: #4a4a4a;
+    color:white;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    margin-bottom: 20px;
+}
+footer {
+    background-color: #4a4a4a;
+    color:white;
+    padding: 10px 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+}
+        .song-card {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #fafafa;
+            border-radius: 10px;
+        }
+        .song-card img {
+            width: 60px;
+            height: 60px;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+        .song-info {
+            flex: 1;
+        }
+        .song-info p {
+            margin: 2px 0;
+        }
+        .song-duration {
+            flex-shrink: 0;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2> Music Playlist Explorer</h2>
+    </header>
+<div class="container">
+    <div class="playlist-info">
+        <img id="playlist-image" src="" alt="Playlist Image">
+        <div style="width: fit-content; padding: 20px; border-radius: 12px; background-color: rgba(0,0,0,0.5);"><h2 id="playlist-name">Playlist Name</h2></div>
+        
+    </div>
+    <div class="songs-list" id="songs-list">
+        <!-- Songs will be inserted here -->
+    </div>
+</div>
+<footer>
+    <p> 2024 Music Playlist Explorer</p>
+</footer>
+<script src="data/data.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        
+
+        function getRandomPlaylist(playlists) {
+            return playlists[Math.floor(Math.random() * playlists.length)];
+        }
+
+        function displayPlaylist(playlist) {
+            document.querySelector('.playlist-info').style = `background: url(${playlist.playlist_art})` 
+            const playlistImage = document.getElementById("playlist-image");
+            const playlistName = document.getElementById("playlist-name");
+            const songsList = document.getElementById("songs-list");
+
+            playlistImage.src = playlist.playlist_art;
+            playlistName.textContent = playlist.playlist_name;
+            songsList.innerHTML = "";
+
+            playlist.songs.forEach(song => {
+                const songCard = document.createElement("div");
+                songCard.className = "song-card";
+
+                const songImage = document.createElement("img");
+                songImage.src = song.cover_art;
+
+                const songInfo = document.createElement("div");
+                songInfo.className = "song-info";
+
+                const songTitle = document.createElement("p");
+                songTitle.className = "song-title";
+                songTitle.textContent = song.title;
+
+                const artistName = document.createElement("p");
+                artistName.textContent = song.artist;
+
+                const albumName = document.createElement("p");
+                albumName.textContent = song.album;
+
+                songInfo.appendChild(songTitle);
+                songInfo.appendChild(artistName);
+                songInfo.appendChild(albumName);
+
+                const songDuration = document.createElement("span");
+                songDuration.className = "song-duration";
+                songDuration.textContent = song.duration;
+
+                songCard.appendChild(songImage);
+                songCard.appendChild(songInfo);
+                songCard.appendChild(songDuration);
+
+                songsList.appendChild(songCard);
+            });
+        }
+
+        const randomPlaylist = getRandomPlaylist(data.playlists);
+        displayPlaylist(randomPlaylist);
+    });
+</script>
+</body>
+</html>
