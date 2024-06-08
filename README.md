@@ -1,83 +1,71 @@
-## Unit 1 Assignment: Music Playlist Explorer
+## Unit 2 Assignment: Music Playlist Explorer
 
 Submitted by: Chikodili Valerie Okeke
 
-Estimated time spent: 32 hours spent in total
+Estimated time spent: 35 hours spent in total
 
-Deployed Application (optional): [Globetrotter Deployed Site](ADD_LINK_HERE)
+Deployed Application (optional): [Music Playlist Explorer](ADD_LINK_HERE)
 
 ### Application Features
 
 #### CORE FEATURES
 
-- [X] **Home Page**
-  - [X] A heading that captures the essence of the destination.
-  - [X] An introductory paragraph that welcomes visitors and sets the context for the site.
-  - [X] An evocative image that represents the location.
-  - [X] Content organized using Flexbox for a fluid layout.
+- [X] **Display Playlists**
+  - [X] Dynamically render playlists on the homepage using JavaScript.
+  - [X] Fetch data from a provided JSON file and use it to create interactive playlist tiles.
+  - [X] Each title should display the playlist's cover image, name, creator, and like count.
 
-- [X] **Top Attractions Page**
-  - [X] A minimum of three attractions, each with a name, a photo, and a brief description.
-  - [X] Content arranged with Flexbox for consistency and responsiveness.
+- [X] **Playlist Details**
+  - [X] Create a modal view that displays detailed information about a playlist when a user clicks on a playlist tile.
+  - [X] The modal should show the playlist's cover image, name, creator, and a list of songs, including their titles, artists, and durations.
 
-- [X] **Guide Section (Choose One)**
-  - [X] Either a Food Guide, Accommodations Guide, or Upcoming Local Events guide.
-  - [X] At least three entries that provide a name, address, and a description catered to a specific type of traveler (families, backpackers, etc.).
-  - [X] Links to more information for each entry, laid out using Flexbox.
+- [X] **Like Playlists**
+  - [X] Implement functionality to allow users to like playlists by clicking a heart icon on each playlist tile.
+  - [X] Update the like count on the playlist tile when a playlist is liked or unliked.
 
-- [X] **Photo Gallery**
-  - [X] At least five images with captions that convey the local atmosphere or highlights.
-  - [X] A gallery presented in a responsive design.
-
-- [X] **Navigation Bar**
-  - [X] Links to each main page of the site (Home, Top Attractions, Photo Gallery, and the chosen Guide section).
-  - [X] A navigation bar styled with Flexbox that adapts to different screen sizes.  
-
-- [X] **Smartphone Friendly**
-  - [X] A design that is fully functional and aesthetically pleasing on smartphones, achieved with media queries.
+- [X] **Shuffle Songs**
+  - [X] Enable users to shuffle the songs within a playlist using a shuffle button in the playlist detail modal.
+  - [X] Rearrange the songs in the modal view when the shuffle button is clicked.
 
 #### STRETCH FEATURES
 
-- [] **Additional Media**
-  - Embed a map or a video that relates to the travel content.
+- [] **Add New Playlists**
+  - [] Allow users to create new playlists.
+  - [ ] Users can input playlist name, creator, and add multiple songs with details like title, artist, and duration.
 
-- [] **Enhanced Layouts**
-  - Utilize CSS Grid on one or more pages for a unique layout.
+- [ ] **Edit Existing Playlists**
+  - [ ] Enable users to modify the details of existing playlists.
+  - [ ] Add an edit button to each playlist tile.
+  - [ ] Users can update the name, creator, and songs of the playlist.
 
-- [] **Interactive Features**
-  - Implement a dropdown menu in the navigation bar for additional categories or sub-pages.
+- [ ] **Delete Playlists**
+  - [ ] Add a delete button to each playlist tile.
+  - [ ] When clicked, the playlist is removed from the display and data model.
 
-- [] **Deployment**: Deploy your website so it's accessible to the public outside of your local machine. 
+- [ ] **Search Functionality**
+  - [ ] Implement a search bar that allows users to filter playlists by name or creator.
 
-- [] **Interactive Navigation**: Enhance the usability of your navigation bar.
-  - Implement a dropdown menu in the navigation bar to organize additional categories or sub-pages.
-
-- [] **User Engagement**: Encourage interaction and engagement from your site visitors.
-  - Create a form to allow users to sign up for a travel newsletter, enhancing user engagement.
-
-- [] **Custom Styling**: Add a personal touch to your site's design.
-  - [] Integrate at least one custom font using Google Fonts to add personality to your site.
-  - [] Experiment with at least one CSS property not covered in the lessons or labs to customize your page further.
+- [ ] **Sorting Options**
+  - [ ] Implement a dropdown or button options that allow users to sort the playlist by name, number of likes, or date added.
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video actually renders and is playable when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
-
-`ADD_EMBEDDED_CODE_HERE`
+`<div style="position: relative; padding-bottom: 63.010501750291716%; height: 0;"><iframe src="https://www.loom.com/embed/a13efb9c3bf544359f92a122d96e7275?sid=3a48c64e-1fdd-4a52-a6cc-49e25c694073" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>`
 
 ### Reflection
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+The topics covered in our lab sessions, while informative, did not fully align with the requirements of the assignment. Most of the content revolved around basic formatting, which was already familiar to the majority of us. However, I did find value in the instruction regarding the proper display of blocks.
+
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-Add your response here
+The time constraint of three days for completing the project posed a significant challenge. Unfortunately, this led to a sense of rushing through tasks, impacting overall efficiency. Given more time, I would have been able to allocate resources towards implementing additional features and refining the project's design.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+Despite the time limitations, the project demo went reasonably well. I managed to achieve all the designated milestones within the given timeframe. However, there were aspirations to incorporate supplementary features, which proved challenging due to the rushed nature of the process. It was amazing to observe the diverse approaches taken by peers in their coding styles. In future endeavors, I aim to explore more creative avenues for visual representation within projects.
 
 ### Open-source libraries used
 
@@ -85,4 +73,4 @@ Add your response here
 
 ### Shout out
 
-Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+Joy Itodo
