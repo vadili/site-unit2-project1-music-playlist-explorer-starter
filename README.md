@@ -50,8 +50,14 @@ Deployed Application (optional): [Music Playlist Explorer](ADD_LINK_HERE)
 
 ### Walkthrough Video
 
-<iframe src="https://www.loom.com/embed/a13efb9c3bf544359f92a122d96e7275?sid=3a48c64e-1fdd-4a52-a6cc-49e25c694073" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-
+- `<div>
+    <a href="https://www.loom.com/share/a13efb9c3bf544359f92a122d96e7275">
+      <p>Music Playlist Explorer 🎵 - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/a13efb9c3bf544359f92a122d96e7275">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/a13efb9c3bf544359f92a122d96e7275-with-play.gif">
+    </a>
+  </div>`
 
 ### Reflection
 
